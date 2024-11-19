@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: trainbooking
+  datasource:
+    url: jdbc:mysql://localhost:3306/train_booking
+    username: root
+    password: ${{ secrets.MYSQL_PASSWORD }}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  web:
+    cors:
+      allowed-origins: http://localhost:4200
+server:
+  port: 8080
