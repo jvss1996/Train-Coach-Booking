@@ -1,0 +1,18 @@
+<div class="seat-layout">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Train Coach Seating Layout</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row" *ngFor="let row of seatRows">
+        <div class="row-number">Row {{row[0].rowNumber}}</div>
+        <div class="seat"
+             *ngFor="let seat of row"
+             [class.booked]="seat.booked"
+             [class.available]="!seat.booked">
+          {{seat.rowNumber}}{{seat.seatLetter}}
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

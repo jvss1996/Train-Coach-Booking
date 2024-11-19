@@ -1,0 +1,43 @@
+<div class="booking-form">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Train Booking System</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="booking-section">
+        <mat-form-field appearance="fill">
+          <mat-label>Number of Seats</mat-label>
+          <input matInput type="number" [(ngModel)]="numberOfSeats" min="1" max="7">
+          <mat-hint>Enter number between 1 and 7</mat-hint>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="bookSeats()">
+          Book Seats
+        </button>
+      </div>
+
+      <mat-divider class="divider"></mat-divider>
+
+      <div class="admin-section">
+        <h3>Admin Controls</h3>
+        <div class="admin-control">
+          <button mat-raised-button color="warn" (click)="clearAllBookings()">
+            Clear All Bookings
+          </button>
+        </div>
+        <div class="admin-control">
+          <mat-form-field appearance="fill">
+            <mat-label>Initial Seats to Book</mat-label>
+            <input matInput [(ngModel)]="seatsToBook"
+                   placeholder="Example: 1A,1B,2C">
+            <mat-hint>Enter seat numbers separated by commas</mat-hint>
+          </mat-form-field>
+          <button mat-raised-button color="accent"
+                  [disabled]="!seatsToBook"
+                  (click)="setInitialBookings()">
+            Set Initial Bookings
+          </button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

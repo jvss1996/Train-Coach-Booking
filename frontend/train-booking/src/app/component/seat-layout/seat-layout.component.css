@@ -1,0 +1,31 @@
+.seat-layout {
+  padding: 20px;
+}
+.row {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.row-number {
+  width: 80px;
+  font-weight: bold;
+}
+.seat {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: default;
+}
+.available {
+  background-color: #4CAF50;
+  color: white;
+}
+.booked {
+  background-color: #f44336;
+  color: white;
+}

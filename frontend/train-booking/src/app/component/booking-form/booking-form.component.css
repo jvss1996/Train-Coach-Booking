@@ -1,0 +1,41 @@
+.booking-form {
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.booking-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  margin: 24px 0;
+}
+
+.admin-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-section h3 {
+  margin: 0;
+  color: #666;
+}
+
+.admin-control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  align-self: flex-start;
+}
